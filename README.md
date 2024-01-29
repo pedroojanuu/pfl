@@ -132,8 +132,6 @@ commentParser :: Parser String
 
 É de notar que cada um dos sub-_parsers_ pode, ainda, recorrer a (sub-)sub-_parsers_, o que explica, por exemplo, a existência de um ```statementParser``` distinto de todos os _parsers_ para os diferentes tipos de _statements_.
 
-<br><br><br><br><br><br><br><br><br><br><br>
-
 Por último, há um aspeto a salientar, que se prende com o _parsing_ de expressões:
 
 Utilizando o Parsec, uma maneira genérica de definir um _parser_ para expressões é fazer com que o mesmo invoque a definição dos operadores (aritméticos ou booleanos) e um sub-_parser_ para os termos de uma expressão (por termo, entenda-se operando da expressão, que pode ser, também, uma nova expressão). Tal pode ser verificado, por exemplo, naquilo que diz respeito ao _parsing_ de expressões aritméticas:
@@ -161,8 +159,6 @@ aOperators = [[Infix (MultExp <$ charWithSpaces '*') AssocLeft],
 No sub-_parser_ ```aTerm```, a ordem dos "try" garante precendência de termos entre parênteses. Já em ```aOperators```, o resultado retornado é uma lista de listas em que cada sublista agrupa operadores com prioridade igual, sendo que os operadores da primeira sublista têm maior prioridade do que os da segunda, e assim por diante. No caso, o operador de multiplicação ('*') tem prioridade máxima, ao passo que o de adição ('+') e de subtração têm menor (e igual entre um e outro).
 
 Uma limitação deste método é que apenas permite que os termos de uma expressão aritmética sejam aritméticos, ou que termos de uma expressão booleana sejam booleanos.
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 Ora, para o segundo caso, sabemos que nem sempre tal se verifica na nossa pequena linguagem. Por exemplo, na expressão ```2 <= 5```, ```2``` e ```5``` são termos aritméticos, mas o resultado da expressão é um booleano, pelo que se está perante uma expressão booleana.
 
@@ -207,8 +203,6 @@ arithmeticComparisonOperators = (stringWithSpaces "<=" >> return LeExp)
 
 Surge, então, o ```arithmeticComparisonParser```, que pode ser visto a ser invocado em ```bTerm```. Recordando, precisamente, ```bTerm```, a prioridade que os operadores de comparação entre termos aritméticos devem ter sobre os operadores entre termos booleanos é garantida pela ordem dos "try" nessa função.
 
-<br>
-
 ### Funcionalidades adicionais
 
 Salientamos duas funcionalidades implementadas, adicionais àquilo que é exigido pelo enunciado:
@@ -247,8 +241,6 @@ Foi implementada com sucesso uma solução para o problema apresentado no âmbit
 A sua realização permitiu aplicar, na prática, os conhecimentos adquiridos ao longo das aulas teórias e teorico-práticas da UC, além de ter constituído um primeiro projeto no paradigma da programação funcional. Foi uma oportunidade para aprimorar o domínio da linguagem Haskell.
 
 Além disso, em particular, pudemos ficar a conhecer a biblioteca Parsec para Haskell.
-
-<br><br>
 
 ### Bibliografia
 
