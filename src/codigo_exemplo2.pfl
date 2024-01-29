@@ -1,0 +1,16 @@
+// Programa que calcula o 10º da sequência de Fibonacci
+
+aux1 := 0;
+aux2 := 1;
+
+i := 1;
+while(i <= (10 - 2)) do(
+    temp := aux2;
+    aux2 := aux1 + aux2;
+    aux1 := temp;
+
+    i := i + 1;
+)
+
+
+decimo_numero_fibonacci := aux2;
