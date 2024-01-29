@@ -10,7 +10,7 @@ O trabalho representa a aplicação prática de conhecimentos adquiridos no âmb
 
 Grupo **T05_G01**:
 
-- Pedro de Almeida Lima (<a href="mailto:up202108806@up.pt">up202108806@up.pt</a>) - contributo de 50%
+- Pedro de Almeida Lima (<a href="mailto:up202108806@up.pt">up202108806@up.pt</a>) - [pedro_lima no GitHub](https://github.com/up202108806) - contributo de 50%
 - Pedro Simão Januário Vieira (<a href="mailto:up202108768@up.pt">up202108768@up.pt</a>) - contributo de 50%
 
 ## Problema
